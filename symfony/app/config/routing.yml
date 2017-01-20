@@ -1,0 +1,4 @@
+sudoku:
+    resource: "@SudokuBundle/Controller/"
+    type:     annotation
+    prefix:   /

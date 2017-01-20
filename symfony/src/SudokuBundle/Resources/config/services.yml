@@ -1,0 +1,4 @@
+services:
+    app.sudoku_service:
+        class: SudokuBundle\Service\SudokuService
+        arguments: [ "@service_container" ]

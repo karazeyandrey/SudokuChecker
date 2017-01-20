@@ -1,12 +1,13 @@
 # SudokuChecker
 
 ## Requirements
-Vagrant version 1.8.1
-Phpunit version 5.1.3
+1. Vagrant version 1.8.1
+2. Phpunit version 5.1.3
 
 ## Setup
 1. Clone the repository `git clone git@github.com:karazeyandrey/SudokuChecker.git`
-2. Run the vagrant script `vagrant up`
+2. Vagrant will use local port 8080, if it in use - change it in Vagrant file
+3. Run the vagrant script `vagrant up`
 
 ## Functionality
 1. Sudoku move check can be done with GET 'http://localhost:8080/sudoku/{0-8}/{0-8}/{1-9}/'

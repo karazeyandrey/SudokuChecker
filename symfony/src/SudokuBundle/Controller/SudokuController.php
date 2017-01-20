@@ -6,10 +6,20 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+/**
+ * SudokuController Class Doc Comment
+ *
+ * @category Class
+ * @package  SudokuBundle
+ */
 class SudokuController extends FOSRestController
 {
     /**
      * @Rest\Get("/sudoku/check/{row}/{col}/{value}/")
+     * @param string $row
+     * @param string $col
+     * @param string $value
+     * @return JsonResponse
      */
     public function checkAction($row, $col, $value)
     {
@@ -22,11 +32,9 @@ class SudokuController extends FOSRestController
         $validRange = range(0, 8);
 
         // check params not out of range
-        if (
-            !in_array($row, $validRange) ||
+        if (!in_array($row, $validRange) ||
             !in_array($col, $validRange) ||
-            !in_array($value, range(1, 9))
-        ) {
+            !in_array($value, range(1, 9))) {
             return new JsonResponse(['errorMessage' => 'Missing parameters'], 400);
         }
 
@@ -44,6 +52,7 @@ class SudokuController extends FOSRestController
 
     /**
      * @Rest\Get("/sudoku/reset/")
+     * @return JsonResponse
      */
     public function resetAction()
     {
@@ -55,6 +64,7 @@ class SudokuController extends FOSRestController
 
     /**
      * @Rest\Get("/sudoku/current/")
+     * @return JsonResponse
      */
     public function getCurrentSudokuAction()
     {

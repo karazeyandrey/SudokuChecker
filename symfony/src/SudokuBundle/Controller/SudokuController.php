@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class SudokuController extends FOSRestController
 {
     /**
-     * @Rest\Get("/sudoku/{row}/{col}/{value}/")
+     * @Rest\Get("/sudoku/check/{row}/{col}/{value}/")
      */
     public function checkAction($row, $col, $value)
     {

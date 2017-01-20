@@ -12,9 +12,10 @@ class SudokuControllerTest extends WebTestCase
         $client = static::createClient();
 
         // proper data
-        $crawler = $client->request('GET', '/sudoku/8/8/7/');
+        $crawler = $client->request('GET', '/sudoku/check/8/8/7/');
 
         $response = json_decode($client->getResponse()->getContent());
+        var_dump($client->getResponse()->getStatusCode());
 
         // check status
         $this->assertEquals(
@@ -38,7 +39,7 @@ class SudokuControllerTest extends WebTestCase
         $this->assertEquals(false, $response->data->solved);
 
         // check wrong params
-        $crawler = $client->request('GET', '/sudoku/8/8/10/');
+        $crawler = $client->request('GET', '/sudoku/check/8/8/10/');
 
         // check error status
         $this->assertEquals(

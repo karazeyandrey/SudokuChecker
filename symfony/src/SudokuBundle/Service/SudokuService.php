@@ -14,7 +14,6 @@ class SudokuService
 {
     /**
      * To store start sudoku state
-     * @access private
      * @var array
      */
     private $startSudoku = [
@@ -31,7 +30,6 @@ class SudokuService
 
     /**
      * To store session
-     * @access private
      * @var object
      */
     private $session;
@@ -40,7 +38,6 @@ class SudokuService
     /**
      * SudokuService constructor
      *
-     * @access public
      * @param object $container
      * @return void
      */
@@ -53,7 +50,6 @@ class SudokuService
     /**
      * Check move method
      *
-     * @access public
      * @param int $row
      * @param int $col
      * @param int $value
@@ -91,7 +87,6 @@ class SudokuService
     /**
      * Check current sudoku solved
      *
-     * @access public
      * @return boolean
      */
     public function checkSolved()
@@ -111,7 +106,6 @@ class SudokuService
     /**
      * Reset current sudoku
      *
-     * @access public
      * @return array
      */
     public function resetCurrentSudoku()
@@ -122,7 +116,6 @@ class SudokuService
     /**
      * Check current sudoku solved
      *
-     * @access public
      * @return array
      */
     public function getCurrentSudoku()
@@ -133,7 +126,6 @@ class SudokuService
     /**
      * Check current sudoku solved
      *
-     * @access private
      * @param array $sudoku
      * @return void
      */
@@ -145,7 +137,6 @@ class SudokuService
     /**
      * Init current sudoku in session
      *
-     * @access private
      * @return void
      */
     private function initCurrentSudoku()
@@ -158,7 +149,6 @@ class SudokuService
     /**
      * Check small square values
      *
-     * @access private
      * @param int $row
      * @param int $col
      * @param int $value
@@ -185,7 +175,6 @@ class SudokuService
     /**
      * Get the start of the current 3x3 grid
      *
-     * @access private
      * @param int $value
      * @return int
      */

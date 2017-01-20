@@ -3,6 +3,7 @@
 ## Requirements
 1. Vagrant version 1.8.1
 2. Phpunit version 5.1.3
+3. VirtualBox
 
 ## Setup
 1. Clone the repository `git clone git@github.com:karazeyandrey/SudokuChecker.git`
